@@ -64,7 +64,7 @@ jdk.zipfs --no-header-files --no-man-pages -G \
 cd ${CRAFT_PART_INSTALL}
 mkdir -p usr/bin
 for tool in java jfr jrunscript jwebserver keytool rmiregistry; do
-    ln -s --relative ${JAVA_HOME}/bin/${tool} usr/bin/
+    /usr/bin/ln -s --relative ${JAVA_HOME}/bin/${tool} usr/bin/
 done
 
-#chroot ${CRAFT_PART_INSTALL}/ /bin/busybox --install
+chroot ${CRAFT_PART_INSTALL}/ /bin/busybox --install
