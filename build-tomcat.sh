@@ -22,4 +22,4 @@ ${CRAFT_PART_INSTALL}/var/lib/${TOMCAT}/
 chown -R 584792:584792 ${CRAFT_PART_INSTALL}/var/lib/${TOMCAT}
 # Write dpkg-query statement for "tomcat" package
 # ii ,zlib1g:amd64,1:1.3.dfsg-3.1ubuntu2.1,zlib,1:1.3.dfsg-3.1ubuntu2.1
-echo ii ,${TOMCAT}:${CRAFT_ARCH_BUILD_FOR},${TOMCAT_VERSION}-0,${TOMCAT},${TOMCAT_VERSION}-0 > ${CRAFT_STAGE}/installed_tomcat.txt
+echo ii ,${TOMCAT}:${CRAFT_ARCH_BUILD_FOR},${TOMCAT_VERSION}-0,${TOMCAT},${TOMCAT_VERSION}-0 > ${CRAFT_STAGE}/tomcat.version
