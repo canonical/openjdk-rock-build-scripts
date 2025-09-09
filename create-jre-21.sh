@@ -12,8 +12,6 @@ chisel cut --release ./ --root ${CRAFT_PART_INSTALL}/ \
     libpcsclite1_libs \
     libnss3_libs \
 
-chroot ${CRAFT_PART_INSTALL}/ /bin/busybox --install
-
 JAVA_HOME=usr/lib/jvm/java-21-openjdk-${CRAFT_ARCH_BUILD_FOR}
 rm -rf ${CRAFT_PART_INSTALL}/${JAVA_HOME}
 jlink --add-modules java.base,\
@@ -68,3 +66,5 @@ mkdir -p usr/bin
 for tool in java jfr jrunscript jwebserver keytool rmiregistry; do
     ln -s --relative ${JAVA_HOME}/bin/${tool} usr/bin/
 done
+
+chroot ${CRAFT_PART_INSTALL}/ /bin/busybox --install
