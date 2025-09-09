@@ -3,7 +3,7 @@
 TOMCAT=$1
 
 if [ "x$TOMCAT" == "x" ]; then
-  echo build-tomcat.sh <tomcat9|tomcat10|tomcat11>
+  echo build-tomcat.sh '<tomcat9|tomcat10|tomcat11>'
   exit 1
 fi
 TOMCAT_VERSION=$(git describe --exact-match --tags)
