@@ -1,13 +1,13 @@
-#!/bin/sh -ex
+#!/bin/bash -ex
 
 TOMCAT=$1
 
-if [ "x$TOMCAT" == "x" ]; then
+if [ -z "${TOMCAT+x}" ]; then
   echo build-tomcat.sh '<tomcat9|tomcat10|tomcat11>'
   exit 1
 fi
 TOMCAT_VERSION=$(git describe --exact-match --tags)
-if [ "x$TOMCAT_VERSION" == "x" ]; then
+if [ -z "${TOMCAT_VERSION+x}" ]; then
   echo must be on git release tag
   exit 1
 fi

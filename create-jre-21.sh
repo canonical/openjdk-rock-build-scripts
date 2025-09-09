@@ -1,4 +1,4 @@
-#!/bin/sh -ex
+#!/bin/bash -ex
 chisel cut --release ./ --root ${CRAFT_PART_INSTALL}/ \
     busybox_bins \
     libtcnative-1_libs \
@@ -67,4 +67,4 @@ for tool in java jfr jrunscript jwebserver keytool rmiregistry; do
     ln -s --relative ${JAVA_HOME}/bin/${tool} usr/bin/
 done
 
-chroot ${CRAFT_PART_INSTALL}/ /bin/busybox --install
+#chroot ${CRAFT_PART_INSTALL}/ /bin/busybox --install
