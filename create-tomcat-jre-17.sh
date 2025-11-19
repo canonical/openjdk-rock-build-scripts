@@ -60,5 +60,3 @@ mkdir -p usr/bin
 for tool in `/usr/bin/ls ${CRAFT_PART_INSTALL}/${JAVA_HOME}/bin`; do
    /usr/bin/ln -s --relative ${JAVA_HOME}/bin/${tool} usr/bin/
 done
-
-chroot ${CRAFT_PART_INSTALL}/ /bin/busybox --install
