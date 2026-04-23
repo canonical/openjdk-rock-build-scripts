@@ -15,7 +15,9 @@ fi
 ant deploy
 # deploy tomcat9
 mkdir -p ${CRAFT_PART_INSTALL}/usr/share/tomcat
+rm -rf output/build/webapps/*
 cp -r output/build/* ${CRAFT_PART_INSTALL}/usr/share/tomcat
+
 # create CATALINA_BASE
 ${CRAFT_PART_INSTALL}/usr/share/tomcat/bin/makebase.sh \
 ${CRAFT_PART_INSTALL}/var/lib/tomcat/
